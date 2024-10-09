@@ -1,0 +1,67 @@
+.main-section {
+  position: relative;
+  height: 500px; /* Adjust based on your needs */
+  background-color: #1b1b1b; /* Dark background to blend with video */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-bottom-left-radius: 120px;
+  border-bottom-right-radius: 120px;
+}
+
+.background-video {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70%; /* Cover 70% of the right side */
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the area properly */
+  z-index: 0; /* Make sure it's behind the text */
+  opacity: 0.9; /* Slight transparency for blending effect */
+}
+
+.content-container {
+  width: 50%; /* Take up 50% on the left side */
+  padding-left: 50px;
+  z-index: 1; /* Make sure the text is on top */
+}
+
+.main-heading {
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.main-button {
+  padding: 12px 30px;
+  font-size: 1rem;
+  background-color: #333;
+  color: #fff;
+  border-radius: 30px;
+  z-index: 1;
+}
+
+.card-container {
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+  z-index: 2;
+}
+
+.floating-card {
+  width: 200px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
