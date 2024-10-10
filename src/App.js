@@ -6,6 +6,7 @@ import "./App.css";
 import Footer from "./components/Footer";
 import Hero from "./components/HeroSection";
 import LoungeFinder from "./components/LoungeFinder";
+import PopularCards from "./components/PopularCards";
 
 const App = () => {
   return (
@@ -14,8 +15,9 @@ const App = () => {
       <Header />
       <MainSection />
       <FeatureCards />
-      <LoungeFinder/>
-      <Hero/>
+      <PopularCards />
+      <LoungeFinder />
+      <Hero />
       <Footer />
     </div>
   );
