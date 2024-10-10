@@ -6,29 +6,29 @@ const features = [
   {
     title: "Personalised Offers",
     description: "Find best Credit Cards based on your spend pattern",
-    icon: "/path/icon1.png",
+    icon: "/PersonalOffer.png",
   },
   {
     title: "Earn Rewards",
     description: "Earn Rewards for every successful Credit Card approval",
-    icon: "/path/icon2.png",
+    icon: "/EarnRewards.png",
   },
   {
     title: "Compare Cards",
     description: "Compare your existing Cards with best in the industry",
-    icon: "/path/icon3.png",
+    icon: "CompareCards.png",
   },
   {
     title: "Max Benefits",
     description: "Get maximum benefits from your Credit Cards",
-    icon: "/path/icon4.png",
+    icon: "MaxBenifits.png",
   },
 ];
 
 const FeatureCards = () => {
   return (
     <div className="feature-cards-container">
-      <Grid container spacing={4}>
+      <Grid container spacing={2}>
         {features.map((feature, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}>
             <div className="feature-card">
@@ -37,10 +37,10 @@ const FeatureCards = () => {
                 alt={feature.title}
                 className="feature-icon"
               />
-              <Typography variant="h6" className="feature-title">
+              <Typography variant="h5" className="feature-title">
                 {feature.title}
               </Typography>
-              <Typography variant="body1" className="feature-description">
+              <Typography variant="button" className="feature-description">
                 {feature.description}
               </Typography>
             </div>

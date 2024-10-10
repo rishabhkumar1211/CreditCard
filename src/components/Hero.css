@@ -1,0 +1,119 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+  
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+  
+/* Background video */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers the entire section */
+    z-index: 1; /* Behind the overlay content */
+}
+  
+/* Overlay Content */
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2; /* In front of the video */
+    max-width: 600px;
+}
+  
+/* Headings and text */
+.overlay-content h1 {
+    font-size: 3rem;
+    margin: 0;
+    line-height: 1.2;
+}
+  
+.overlay-content h1 .highlight {
+    color: #d79e52; /* Color for 'Impact' */
+}
+  
+.overlay-content h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+  
+.overlay-content .subheading {
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+  
+.overlay-content blockquote {
+    font-style: italic;
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+  
+/* Image styling with spotlight and bronze effect */
+.image-container {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Rounded effect */
+    object-fit: cover;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    position: relative;
+    z-index: 2; /* In front of the spotlight */
+}
+
+/* Bronze tint effect */
+.image {
+    filter: sepia(50%) saturate(200%) hue-rotate(30deg);
+}
+
+/* Spotlight effect */
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 70%);
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Behind the image */
+    opacity: 0.7;
+    filter: blur(10px);
+}
+
+/* Optional: Styling for responsiveness */
+@media (max-width: 768px) {
+    .overlay-content h1 {
+        font-size: 2rem;
+    }
+
+    .overlay-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .image-container {
+        width: 200px;
+        height: 200px;
+    }
+}

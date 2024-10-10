@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Typography } from "@mui/material";
 import "./MainSection.css"; // Custom CSS
 
+
 const MainSection = () => {
   return (
     <div className="main-section">
@@ -26,9 +27,9 @@ const MainSection = () => {
       </div>
 
       {/* Credit Card Image */}
-      <div className="card-container">
+      <div className="card-item">
         <img
-          src="/path-to-your-image/credit-card.png"
+          src="/Card.png"
           alt="Credit Card"
           className="floating-card"
         />

@@ -1,29 +1,32 @@
 .main-section {
   position: relative;
-  height: 500px; /* Adjust based on your needs */
+  height: 722px; /* Adjust based on your needs */
   background-color: #1b1b1b; /* Dark background to blend with video */
   display: flex;
   align-items: center;
   overflow: hidden;
   border-bottom-left-radius: 120px;
   border-bottom-right-radius: 120px;
+  margin-top: 64px;
+  
 }
 
 .background-video {
   position: absolute;
   right: 0;
   top: 0;
-  width: 70%; /* Cover 70% of the right side */
+  width: 66%;
   height: 100%;
-  object-fit: cover; /* Ensures the video covers the area properly */
-  z-index: 0; /* Make sure it's behind the text */
-  opacity: 0.9; /* Slight transparency for blending effect */
+  z-index: 0;
+  opacity: 0.6;
+  object-fit: none;
+  object-position: bottom;
 }
 
 .content-container {
   width: 50%; /* Take up 50% on the left side */
   padding-left: 50px;
-  z-index: 1; /* Make sure the text is on top */
+  z-index: 3; /* Make sure the text is on top */
 }
 
 .main-heading {
@@ -42,16 +45,17 @@
   z-index: 1;
 }
 
-.card-container {
+.card-item {
   position: absolute;
-  bottom: 0;
-  right: 50px;
+  bottom: 15rem;
+  right: 18rem;
   z-index: 2;
 }
 
 .floating-card {
-  width: 200px;
-  animation: float 3s ease-in-out infinite;
+  width: 550px;
+  height: 340px;
+
 }
 
 @keyframes float {
