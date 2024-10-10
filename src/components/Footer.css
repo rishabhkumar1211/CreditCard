@@ -7,6 +7,7 @@
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
+  
 }
 
 .social-section {
@@ -28,6 +29,7 @@
 .download-buttons {
   display: flex;
   gap: 10px;
+  margin-bottom: 32px;
 }
 
 .download-button {
@@ -61,7 +63,7 @@
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid #4a4a4a;
-  padding-top: 20px;
+  padding-top: 36px;
   margin-top: 30px;
 }
 

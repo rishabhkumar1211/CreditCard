@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="footer-container">
       <Grid container spacing={4} className="footer-content">
         {/* Social Media and Description Section */}
-        <Grid item xs={12} sm={6} md={4} className="social-section">
+        <Grid item xs={12} sm={6} md={4} direction="column" className="social-section">
           <div className="social-icons">
             <IconButton color="inherit">
               <TwitterIcon />
@@ -22,6 +22,8 @@ const Footer = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
             ac ultrices odio. Nulla at congue diam, at dignissim turpis.
           </Typography>
+
+          <div className="footer-bottom">
           <div className="download-buttons">
             <Button
               variant="outlined"
@@ -37,7 +39,13 @@ const Footer = () => {
             >
               GOOGLE PLAY
             </Button>
-          </div>
+            </div>
+            </div>
+       
+          <Typography variant="body2" className="footer-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+            ac ultrices odio. Nulla at congue diam, at dignissim turpis.
+          </Typography>
         </Grid>
 
         {/* Footer Links */}
