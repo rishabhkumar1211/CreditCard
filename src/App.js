@@ -11,8 +11,9 @@ import PopularCards from "./components/PopularCards";
 const App = () => {
   return (
     <div>
-      <div className="topbar-overlay" />
       <Header />
+      <div className="topbar-overlay" />
+
       <MainSection />
       <FeatureCards />
       <PopularCards />

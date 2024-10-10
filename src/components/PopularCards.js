@@ -42,8 +42,6 @@ const CardComponent = ({ card }) => (
       maxWidth: 345,
       backgroundColor: "black",
       color: "#fff",
-      //   borderRadius: "12px",
-      //   marginBottom: "20px",
     }}
   >
     <CardContent>
@@ -87,7 +85,7 @@ const PopularCards = () => {
   };
 
   return (
-    <Box sx={{ backgroundColor: "#000", padding: "50px" }}>
+    <Box sx={{ backgroundColor: "#000", padding: "50px", color: "white" }}>
       <Typography variant="h3" color="#fff" align="center" sx={{ mb: 5 }}>
         Popular credit cards for every dedicated category
       </Typography>
@@ -97,12 +95,34 @@ const PopularCards = () => {
           onChange={handleTabChange}
           textColor="inherit"
           indicatorColor="primary"
+          sx={{
+            "& .MuiTabs-flexContainer": {
+              justifyContent: "center",
+            },
+          }}
         >
-          <Tab label="Featured" />
-          <Tab label="Cashback" />
-          <Tab label="Rewards" />
-          <Tab label="Fuel" />
-          <Tab label="Business" />
+          {["Featured", "Cashback", "Rewards", "Fuel", "Business"].map(
+            (label, index) => (
+              <Tab
+                key={index}
+                label={label}
+                sx={{
+                  backgroundColor:
+                    selectedTab === index ? "#fff" : "transparent",
+                  color: selectedTab === index ? "#000" : "#fff",
+                  borderRadius: "12px",
+                  borderTop: selectedTab === index ? "none" : "2px solid #fff", // White border for unselected tabs
+                  borderLeft: selectedTab === index ? "none" : "2px solid #fff", // White border for unselected tabs
+                  borderRight:
+                    selectedTab === index ? "none" : "2px solid #fff", // White border for unselected tabs
+                  margin: "0 10px",
+                  "&:hover": {
+                    backgroundColor: selectedTab === index ? "#fff" : "#1a1a1a",
+                  },
+                }}
+              />
+            )
+          )}
         </Tabs>
       </Box>
       <Grid container spacing={4} justifyContent="center">
