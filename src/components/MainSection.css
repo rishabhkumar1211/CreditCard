@@ -8,7 +8,6 @@
   border-bottom-left-radius: 120px;
   border-bottom-right-radius: 120px;
   margin-top: 64px;
-  
 }
 
 .background-video {
@@ -48,14 +47,13 @@
 .card-item {
   position: absolute;
   bottom: 15rem;
-  right: 18rem;
+  right: 15rem;
   z-index: 2;
 }
 
 .floating-card {
   width: 550px;
   height: 340px;
-
 }
 
 @keyframes float {
