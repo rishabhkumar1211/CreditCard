@@ -2,7 +2,6 @@ import React from "react";
 import { Button, Typography } from "@mui/material";
 import "./MainSection.css"; // Custom CSS
 
-
 const MainSection = () => {
   return (
     <div className="main-section">
@@ -20,7 +19,19 @@ const MainSection = () => {
         <Button
           variant="contained"
           className="main-button"
-          style={{ backgroundColor: "#333", color: "#fff" }}
+          style={{
+            color: "#e4c2a2",
+            background:
+              "linear-gradient(200.74deg, rgba(214, 211, 194, 0.2) 0%, rgba(92, 92, 92, 0.14) 100%)",
+            border: "2.16px solid transparent", // Set border to transparent for gradient
+            borderImage:
+              "linear-gradient(200.74deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)",
+            borderImageSlice: 1, // Ensure the gradient is used for the border
+
+            "&:hover": {
+              backgroundColor: "#505050",
+            },
+          }}
         >
           Find A Credit Card
         </Button>
@@ -28,11 +39,7 @@ const MainSection = () => {
 
       {/* Credit Card Image */}
       <div className="card-item">
-        <img
-          src="/Card.png"
-          alt="Credit Card"
-          className="floating-card"
-        />
+        <img src="/Card.png" alt="Credit Card" className="floating-card" />
       </div>
     </div>
   );

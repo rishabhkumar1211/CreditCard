@@ -1,5 +1,5 @@
 .footer-container {
-  background-color: #1f1f1f;
+  background-color: black;
   padding: 40px 20px;
   color: #fff;
 }
@@ -7,7 +7,6 @@
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
-  
 }
 
 .social-section {

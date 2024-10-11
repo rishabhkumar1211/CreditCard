@@ -1,0 +1,67 @@
+/* Container for the card */
+.card-kundali-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+}
+
+/* Main card with gradient background and ornamental top shape */
+.card-kundali {
+  width: 350px;
+  height: 520px;
+  background: linear-gradient(180deg, #1c1c1c 0%, #333333 100%);
+  position: relative;
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 0% 100%, 0% 15%);
+}
+
+/* Card text styling */
+.card-text {
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.card-text h1 {
+  font-family: "Times New Roman", serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Geometric Pattern at the Bottom */
+.geometric-pattern {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 30%;
+  margin-bottom: 30px;
+}
+
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 60px solid rgba(212, 175, 55, 0.8); /* Gold color */
+}
+
+.semi-circle {
+  width: 200px;
+  height: 100px;
+  border-radius: 100px 100px 0 0;
+  background-color: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.8); /* Gold color */
+  position: relative;
+  top: -20px;
+}

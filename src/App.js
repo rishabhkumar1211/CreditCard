@@ -8,6 +8,7 @@ import Hero from "./components/HeroSection";
 import LoungeFinder from "./components/LoungeFinder";
 import PopularCards from "./components/PopularCards";
 import CompareCards from "./components/CompareCards";
+import Benifit from "./components/BenifitCard";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
 
       <MainSection />
       <FeatureCards />
+      <Benifit />
       <PopularCards />
       <CompareCards />
       <LoungeFinder />

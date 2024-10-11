@@ -4,6 +4,7 @@ import "./Hero.css";
 function Hero() {
   return (
     <div className="hero-section">
+      <div className="rectangle"></div>
       {/* Background Video */}
       <video className="hero-video" autoPlay loop muted>
         <source src="ratan_tata_spinner.mp4" type="video/mp4" />
@@ -17,11 +18,12 @@ function Hero() {
           See the <span className="highlight">Impact</span> in action
         </h1>
 
-        {/* Image with spotlight and bronze effect */}
+        {/* Image with spotlight effect */}
         <div className="image-container">
-          <div className="image-gradient">
-            <img src="./Hero.png" alt="Ratan Tata" className="image" />
-          </div>
+          <img src="./Hero.png" alt="Ratan Tata" className="image" />
+          <div className="v-mega-spotlight"></div>{" "}
+          <div className="v-spotlight"></div>{" "}
+          {/* "V"-shaped spotlight effect */}
         </div>
 
         <div className="hero-details">
