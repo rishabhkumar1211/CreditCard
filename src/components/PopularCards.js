@@ -59,7 +59,12 @@ const CardComponent = ({ card }) => (
             <Chip
               key={index}
               label={category}
-              sx={{ backgroundColor: "#3b3b3b", color: "#fff" }}
+              sx={{
+                borderRadius: "2px",
+                background:
+                  "linear-gradient(200.74deg, rgba(214, 211, 194, 0.2) 0%, rgba(92, 92, 92, 0.14) 100%)",
+                color: "#e4c2a2",
+              }}
             />
           ))}
         </Box>

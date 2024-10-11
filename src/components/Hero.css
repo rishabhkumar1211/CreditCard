@@ -1,192 +1,193 @@
-
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Arial', sans-serif;
-}
-
 /* Hero Section */
 .hero-section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* Background video */
 .hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 90%;
-    object-fit: cover; /* Ensures video covers the entire section */
-    z-index: 1; /* Behind the overlay content */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  object-fit: cover; /* Ensures video covers the entire section */
+  z-index: 1; /* Behind the overlay content */
 }
 
 /* Overlay Content */
 .overlay-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    z-index: 2; /* In front of the video */
-    width: 100%;
-    max-width: 1200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 2; /* In front of the video */
+  width: 100%;
+  max-width: 1200px;
 }
 
 /* Headings and text */
 .overlay-content h1 {
-    font-size: 3rem;
-    margin: 0;
-    line-height: 1.2;
-    text-align: center;
-    color: black;
+  font-size: 3rem;
+  margin: 0;
+  line-height: 1.2;
+  text-align: center;
+  color: black;
 }
 
 .overlay-content h3 {
-    margin: 0;
-    line-height: 1.2;
-    text-align: center;
-    color: black;
+  margin: 0;
+  line-height: 1.2;
+  text-align: center;
+  color: black;
 }
 
 .overlay-content h1 .highlight {
-    color: #d79e52; /* Color for 'Impact' */
+  color: #d79e52; /* Color for 'Impact' */
 }
 
 /* Centered image styling with radial gradient */
 .image-container {
-    position: relative;
-    margin: 0 auto;
-    width: 200px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: radial-gradient(112.85% 110.91% at 50% -12.63%, rgba(212, 194, 168, 0) 45%, #D4C2A8 100%);
-    border-radius: 15px;
+  position: relative;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+    112.85% 110.91% at 50% -12.63%,
+    rgba(212, 194, 168, 0) 45%,
+    #d4c2a8 100%
+  );
+  border-radius: 15px;
 }
 
 /* Image with bronze effect */
 .image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: relative;
-    z-index: 2; /* In front of the spotlight */
-  
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2; /* In front of the spotlight */
 }
 
 /* Bronze spotlight effect */
 .image-container::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 70%);
-    transform: translate(-50%, -50%);
-    z-index: 1; /* Behind the image */
-    /* opacity: 0.7; */
-    filter: blur(10px);
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Behind the image */
+  /* opacity: 0.7; */
+  filter: blur(10px);
 }
 
 /* Layout for hero profile and quote */
 .hero-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 270px;
-    top: 133px;
-    position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 270px;
+  top: 133px;
+  position: absolute;
 }
 
 .hero_profile {
-    flex: 1;
-    text-align: center;
+  flex: 1;
+  text-align: center;
 }
 
 .hero_profile h2 {
-    font-size: 2rem;
-    margin: 0;
-    color: black;
+  font-size: 2rem;
+  margin: 0;
+  color: black;
 }
 
 .hero_profile .subheading {
-    font-size: 1.2rem;
-    color: #79572C;
-    margin-top: 5px;
+  font-size: 1.2rem;
+  color: #79572c;
+  margin-top: 5px;
 }
 
 .hero_quote {
-    flex: 1;
-    text-align: center;
+  flex: 1;
+  text-align: center;
 }
 
 .hero_quote blockquote {
-    font-style: italic;
-    font-size: 1.1rem;
-    color: black;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: black;
 }
 
 /* Optional: Styling for responsiveness */
 @media (max-width: 768px) {
-    .overlay-content h1 {
-        font-size: 2rem;
-    }
+  .overlay-content h1 {
+    font-size: 2rem;
+  }
 
-    .hero-details {
-        flex-direction: column;
-        text-align: center;
-    }
+  .hero-details {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .image-container {
-        width: 250px;
-        height: 250px;
-    }
+  .image-container {
+    width: 250px;
+    height: 250px;
+  }
 
-    .hero_profile {
-        text-align: center;
-        margin-bottom: 20px;
-    }
+  .hero_profile {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
-    .hero_quote {
-        text-align: center;
-    }
+  .hero_quote {
+    text-align: center;
+  }
 
-    .hero_profile h2, .hero_profile .subheading, .hero_quote blockquote {
-        text-align: center;
-    }
+  .hero_profile h2,
+  .hero_profile .subheading,
+  .hero_quote blockquote {
+    text-align: center;
+  }
 }
-
-
 
 /* HeroImage.css */
 .hero-container {
-    position: relative;
-    width: 300px; /* Adjust as needed */
-    height: 350px; /* Adjust as needed */
-  }
-  
-  .hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  
-  }
-  
-  .spotlight-effect {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 120px;
-    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
-    /* filter: blur(20px); */
-  }
-  
+  position: relative;
+  width: 300px; /* Adjust as needed */
+  height: 350px; /* Adjust as needed */
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.spotlight-effect {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  /* filter: blur(20px); */
+}

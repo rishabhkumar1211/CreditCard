@@ -36,7 +36,7 @@ const LoungeFinder = () => {
           variant="h3"
           component="h1"
           gutterBottom
-          sx={{ fontWeight: "bold", color: "#fff" }}
+          sx={{ fontWeight: "bold", color: "#fff", pt: 6 }}
         >
           Lounge Finder
         </Typography>
@@ -52,9 +52,15 @@ const LoungeFinder = () => {
             mb: 12,
             py: 2,
             px: 4,
-            backgroundColor: "#3b3b3b",
-            borderRadius: "25px",
             fontWeight: "bold",
+            color: "#e4c2a2",
+            background:
+              "linear-gradient(200.74deg, rgba(214, 211, 194, 0.2) 0%, rgba(92, 92, 92, 0.14) 100%)",
+            border: "2.16px solid transparent", // Set border to transparent for gradient
+            borderImage:
+              "linear-gradient(200.74deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)",
+            borderImageSlice: 1, // Ensure the gradient is used for the border
+
             "&:hover": {
               backgroundColor: "#505050",
             },
