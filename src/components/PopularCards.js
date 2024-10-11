@@ -48,10 +48,10 @@ const CardComponent = ({ card }) => (
       <img
         src={card.image}
         alt={card.title}
-        style={{ width: "100%", borderRadius: "12px" }}
+        style={{ width: "90%", borderRadius: "12px" }}
       />
       <div style={{ marginLeft: "3rem" }}>
-        <Typography variant="h5" sx={{ mt: 2 }}>
+        <Typography variant="h5" sx={{ mt: 2, fontFamily: "PP Cirka" }}>
           {card.title}
         </Typography>
         <Box sx={{ display: "flex", gap: 1, mt: 1 }}>
@@ -89,8 +89,21 @@ const PopularCards = () => {
 
   return (
     <Box sx={{ backgroundColor: "#000", padding: "50px", color: "white" }}>
-      <Typography variant="h3" color="#fff" align="center" sx={{ mb: 5 }}>
-        Popular credit cards for every dedicated category
+      <Typography
+        variant="h3"
+        color="#fff"
+        align="center"
+        sx={{ mb: 1, fontFamily: "PP Cirka" }}
+      >
+        Popular credit cards for every
+      </Typography>
+      <Typography
+        variant="h3"
+        color="#fff"
+        align="center"
+        sx={{ mb: 5, fontFamily: "PP Cirka" }}
+      >
+        dedicated category
       </Typography>
       <Box sx={{ display: "flex", justifyContent: "center", mb: 5 }}>
         <Tabs

@@ -40,7 +40,11 @@ const LoungeFinder = () => {
         >
           Lounge Finder
         </Typography>
-        <Typography variant="subtitle1" gutterBottom sx={{ color: "#ccc" }}>
+        <Typography
+          variant="subtitle1"
+          gutterBottom
+          sx={{ color: "#ccc", fontFamily: "PP Cirka" }}
+        >
           Check which lounges you can access at a click!
         </Typography>
 

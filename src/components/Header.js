@@ -1,5 +1,13 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, Button } from "@mui/material";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  IconButton,
+  Avatar,
+} from "@mui/material";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown"; // Import the dropdown icon
 
 const Header = () => {
   return (
@@ -15,16 +23,47 @@ const Header = () => {
           <span style={{ color: "white" }}>KARO</span>
         </Typography>
         <div style={{ display: "flex", gap: "6rem" }}>
-          <Typography variant="body1">Our Products</Typography>
-          <Typography variant="body1">Tools</Typography>
-          <Typography variant="body1">Blogs</Typography>
-          <Typography variant="body1">About Us</Typography>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <Typography variant="body1">OUR PRODUCTS</Typography>
+            <IconButton size="small">
+              <KeyboardArrowDownIcon style={{ color: "white" }} />
+            </IconButton>
+          </div>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <Typography variant="body1">TOOLS</Typography>
+            <IconButton size="small">
+              <KeyboardArrowDownIcon style={{ color: "white" }} />
+            </IconButton>
+          </div>
+          <Typography variant="body1">BLOGS</Typography>
+          <Typography variant="body1">ABOUT US</Typography>
         </div>
         <Button
           color="inherit"
-          style={{ backgroundColor: "#f4b400", borderRadius: "20px" }}
+          style={{
+            color: "#e4c2a2",
+            borderRadius: "4px",
+            background:
+              "linear-gradient(200.74deg, rgba(214, 211, 194, 0.2) 0%, rgba(92, 92, 92, 0.14) 100%)",
+            border: "2.16px solid transparent",
+            borderImage:
+              "linear-gradient(200.74deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)",
+            borderImageSlice: 1,
+            "&:hover": {
+              backgroundColor: "#505050",
+            },
+            textTransform: "none",
+            display: "flex", // Align items in a row
+            alignItems: "center", // Center vertically
+            gap: "0.5rem", // Space between avatar and text
+          }}
         >
           Sign In
+          <Avatar
+            alt="User Avatar" // Alt text for accessibility
+            src="./profile.png" // Replace with your image path
+            style={{ width: 30, height: 30 }} // Size of the avatar
+          />
         </Button>
       </Toolbar>
     </AppBar>

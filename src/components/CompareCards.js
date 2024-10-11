@@ -112,7 +112,7 @@ const PodiumImage = styled.img`
 // Info Text
 const InfoText = styled.p`
   color: white;
-  font-family: "PP Cirka", sans-serif;
+  font-family: "PP Cirka";
   font-size: 1.5rem;
   margin-top: 50px;
   z-index: 1;

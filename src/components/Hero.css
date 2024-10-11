@@ -1,4 +1,9 @@
 /* Hero Section */
+body {
+  margin: 0;
+  font-family: "PP Cirka";
+}
+
 .hero-section {
   position: relative;
   width: 100%;
