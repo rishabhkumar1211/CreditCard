@@ -12,7 +12,7 @@ import Benifit from "./components/BenifitCard";
 
 const App = () => {
   return (
-    <div>
+    <div className="rootclass">
       <Header />
       <div className="topbar-overlay" />
 

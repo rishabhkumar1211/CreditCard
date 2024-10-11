@@ -37,6 +37,10 @@
   }
 }
 
+.rootclass {
+  background: linear-gradient(0deg, #000000 0%, #201e1e 50%, #524220 100%);
+}
+
 .topbar-overlay {
   position: absolute;
   top: 0;
