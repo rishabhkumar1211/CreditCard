@@ -74,9 +74,7 @@ const CardComponent = ({ card }) => (
         <Typography variant="body2" sx={{ color: "#ccc" }}>
           {card.description}
         </Typography>
-        <Button variant="contained" color="warning" sx={{ mt: 2 }}>
-          Apply Now
-        </Button>
+        <Button sx={{ mt: 2, color: "#e4c2a2" }}>Apply Now</Button>
       </div>
     </CardContent>
   </Card>
