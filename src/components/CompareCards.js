@@ -59,7 +59,7 @@ const Title = styled.h1`
   -webkit-background-clip: text;
   color: transparent;
   text-align: center;
-  top: 6rem;
+  top: 5rem;
 `;
 
 // Card Showcase
@@ -114,7 +114,7 @@ const InfoText = styled.p`
   color: white;
   font-family: "PP Cirka";
   font-size: 1.5rem;
-  margin-top: 50px;
+  margin-top: 5rem;
   z-index: 1;
   text-align: center;
   width: 30%;
