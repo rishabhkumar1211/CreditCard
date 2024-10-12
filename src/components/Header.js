@@ -9,6 +9,9 @@ import {
 } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown"; // Import the dropdown icon
 
+// Import the profile image
+import profileImg from "../assets/images/profile.png"; // Adjust the path to match your project structure
+
 const Header = () => {
   return (
     <AppBar
@@ -81,7 +84,7 @@ const Header = () => {
           Sign In
           <Avatar
             alt="User Avatar"
-            src="./profile.png"
+            src={profileImg} // Use the imported profile image
             sx={{
               width: 40, // Increase size of avatar
               height: 40, // Ensure avatar is larger than the button height

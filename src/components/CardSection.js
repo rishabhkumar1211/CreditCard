@@ -1,6 +1,5 @@
 import React from "react";
 import { Grid, Card, CardContent, Typography } from "@mui/material";
-// import "./CardSection.css"; // Include custom CSS
 
 const cards = [
   { title: "Personalized Offers", description: "Best offers curated for you" },

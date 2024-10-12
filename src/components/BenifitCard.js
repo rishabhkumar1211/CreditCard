@@ -1,27 +1,59 @@
 import React from "react";
-import { Card, Typography, Box } from "@mui/material";
-import "./Benifit.css"; // Assuming you want to use an external CSS file
+import { Card, CardMedia, Grid } from "@mui/material";
+// Import styles from the correct path
+import "../styles/Benifit.css";
 
-const Benifit = () => {
+// Import images directly
+import cardKundali from "../assets/images/cardKundali.png";
+import beatCard from "../assets/images/beatCard.png";
+import compareCard from "../assets/images/comparecard.png";
+import loungeFinder from "../assets/images/loungefinder.png";
+
+const ImageList = () => {
+  const images = [
+    {
+      id: 1,
+      src: cardKundali,
+    },
+    {
+      id: 2,
+      src: beatCard,
+    },
+    {
+      id: 3,
+      src: compareCard,
+    },
+    {
+      id: 4,
+      src: loungeFinder,
+    },
+  ];
+
+  // Define the style for the card background color
+  const cardStyle = {
+    backgroundColor: "black", // Set card background to black
+    color: "white", // Optional: Set text color to white if needed
+    padding: "25px", // Remove padding inside card
+  };
+
   return (
-    <div className="card-kundali-container">
-      <div className="card-kundali">
-        {/* Text Section */}
-        <div className="card-text">
-          <h1>Card</h1>
-          <h1>Kundali</h1>
-        </div>
-
-        {/* Geometric Pattern at Bottom */}
-        <div className="geometric-pattern">
-          <div className="triangle-up"></div>
-          <div className="triangle-up"></div>
-          <div className="triangle-up"></div>
-          <div className="semi-circle"></div>
-        </div>
-      </div>
+    <div className="benifitCard">
+      <Grid container justifyContent="center">
+        {images.map((image) => (
+          <Grid item xs={12} sm={6} md={3} key={image.id}>
+            <Card sx={{ ...cardStyle, height: "100%" }}>
+              <CardMedia
+                component="img"
+                image={image.src}
+                alt={`Image ${image.id}`} // Updated alt text for accessibility
+                style={{ width: "100%", objectFit: "cover" }} // Ensure image fits within card
+              />
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
     </div>
   );
 };
 
-export default Benifit;
+export default ImageList;

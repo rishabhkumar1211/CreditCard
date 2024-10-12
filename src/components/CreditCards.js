@@ -1,22 +1,26 @@
 import React from "react";
 import { Grid, Card, CardMedia, CardContent, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-// import "./CardSection.css"; // Same CSS file for consistency
+
+// Importing images with corrected paths
+import platinumCardImage from "../assets/images/platinum-card.png"; // Corrected path for Platinum Card image
+import goldCardImage from "../assets/images/gold-card.png"; // Corrected path for Gold Card image
+import silverCardImage from "../assets/images/silver-card.png"; // Corrected path for Silver Card image
 
 const creditCards = [
   {
     title: "Platinum Card",
-    image: "/images/platinum-card.png",
+    image: platinumCardImage, // Use imported image
     description: "Best for travel rewards",
   },
   {
     title: "Gold Card",
-    image: "/images/gold-card.png",
+    image: goldCardImage, // Use imported image
     description: "Great for cashback",
   },
   {
     title: "Silver Card",
-    image: "/images/silver-card.png",
+    image: silverCardImage, // Use imported image
     description: "Low interest rates",
   },
 ];
@@ -32,18 +36,20 @@ const CreditCards = () => {
             transition={{ duration: 0.5, delay: index * 0.2 }}
             className="card-container"
           >
-            <CardMedia
-              component="img"
-              height="140"
-              image={card.image}
-              alt={card.title}
-            />
-            <CardContent>
-              <Typography className="card-title">{card.title}</Typography>
-              <Typography className="card-description">
-                {card.description}
-              </Typography>
-            </CardContent>
+            <Card>
+              <CardMedia
+                component="img"
+                height="140"
+                image={card.image}
+                alt={card.title}
+              />
+              <CardContent>
+                <Typography className="card-title">{card.title}</Typography>
+                <Typography className="card-description">
+                  {card.description}
+                </Typography>
+              </CardContent>
+            </Card>
           </motion.div>
         </Grid>
       ))}

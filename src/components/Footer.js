@@ -252,14 +252,15 @@ const Footer = () => {
                     px: 2,
                     py: 1,
                     display: "inline-block",
-                    mt: { xs: 2, sm: 0 },
+                    mt: { xs: 4, sm: 0 },
                     textAlign: "right",
                   }}
                 >
                   © 2024 BankKaro
-                  <p style={{ padding: 0, margin: 0 }}>
+                  <br />
+                  <span style={{ padding: 0, margin: 0 }}>
                     Powered by Pouring Pounds
-                  </p>
+                  </span>
                 </Typography>
               </Grid>
             </Grid>

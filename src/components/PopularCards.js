@@ -1,4 +1,3 @@
-// App.js
 import React from "react";
 import {
   Grid,
@@ -11,25 +10,31 @@ import {
   Tabs,
   Tab,
 } from "@mui/material";
+import { PiArrowFatRight } from "react-icons/pi";
+
+// Import images from src/assets
+import pc1 from "../assets/images/pc1.png";
+import pc2 from "../assets/images/pc2.png";
+import pc3 from "../assets/images/pc3.png";
 
 const cardData = [
   {
     title: "HDFC Regalia",
-    image: "./pc1.png", // Replace with actual image URL
+    image: pc1, // Use imported image
     cashback: "50% Cashback",
     description: "High cashback on online and offline spends",
     categories: ["Travel", "Online Shopping"],
   },
   {
     title: "Axis Bank Ace Credit Card",
-    image: "./pc2.png", // Replace with actual image URL
+    image: pc2, // Use imported image
     cashback: "50% Cashback",
     description: "High cashback on online and offline spends",
     categories: ["Travel", "Online Shopping"],
   },
   {
-    title: "Indian Oil HDFC Credit Card",
-    image: "./pc3.png", // Replace with actual image URL
+    title: "Indian Oil HDFC Credit",
+    image: pc3, // Use imported image
     cashback: "50% Cashback",
     description: "High cashback on online and offline spends",
     categories: ["Travel", "Online Shopping"],
@@ -74,7 +79,10 @@ const CardComponent = ({ card }) => (
         <Typography variant="body2" sx={{ color: "#ccc" }}>
           {card.description}
         </Typography>
-        <Button sx={{ mt: 2, color: "#e4c2a2" }}>Apply Now</Button>
+        <Button sx={{ mt: 2, color: "#e4c2a2" }}>
+          Apply Now
+          <PiArrowFatRight style={{ fontSize: "18px", paddingLeft: "10px" }} />
+        </Button>
       </div>
     </CardContent>
   </Card>
@@ -127,10 +135,10 @@ const PopularCards = () => {
                     selectedTab === index ? "#fff" : "transparent",
                   color: selectedTab === index ? "#000" : "#fff",
                   borderRadius: "12px",
-                  borderTop: selectedTab === index ? "none" : "2px solid #fff", // White border for unselected tabs
-                  borderLeft: selectedTab === index ? "none" : "2px solid #fff", // White border for unselected tabs
+                  borderTop: selectedTab === index ? "none" : "2px solid #fff",
+                  borderLeft: selectedTab === index ? "none" : "2px solid #fff",
                   borderRight:
-                    selectedTab === index ? "none" : "2px solid #fff", // White border for unselected tabs
+                    selectedTab === index ? "none" : "2px solid #fff",
                   margin: "0 10px",
                   "&:hover": {
                     backgroundColor: selectedTab === index ? "#fff" : "#1a1a1a",

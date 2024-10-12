@@ -1,27 +1,33 @@
 import React from "react";
 import { Grid, Typography } from "@mui/material";
-import "./FeatureCards.css";
+import "../styles/FeatureCards.css";
+
+// Import icons with corrected paths
+import personalOfferIcon from "../assets/images/PersonalOffer.png"; // Corrected path for Personalised Offers icon
+import earnRewardsIcon from "../assets/images/EarnRewards.png"; // Corrected path for Earn Rewards icon
+import compareCardsIcon from "../assets/images/CompareCards.png"; // Corrected path for Compare Cards icon
+import maxBenefitsIcon from "../assets/images/MaxBenifits.png"; // Corrected path for Max Benefits icon
 
 const features = [
   {
     title: "Personalised Offers",
     description: "Find best Credit Cards based on your spend pattern",
-    icon: "/PersonalOffer.png",
+    icon: personalOfferIcon, // Use imported icon
   },
   {
     title: "Earn Rewards",
     description: "Earn Rewards for every successful Credit Card approval",
-    icon: "/EarnRewards.png",
+    icon: earnRewardsIcon, // Use imported icon
   },
   {
     title: "Compare Cards",
     description: "Compare your existing Cards with best in the industry",
-    icon: "CompareCards.png",
+    icon: compareCardsIcon, // Use imported icon
   },
   {
     title: "Max Benefits",
     description: "Get maximum benefits from your Credit Cards",
-    icon: "MaxBenifits.png",
+    icon: maxBenefitsIcon, // Use imported icon
   },
 ];
 

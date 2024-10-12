@@ -1,13 +1,18 @@
 import React from "react";
-import "./Hero.css";
+import "../styles/Hero.css";
+
+// Import the video and image directly
+import heroVideo from "../assets/videos/ratan_tata_spinner.mp4";
+import heroImage from "../assets/images/Hero.png";
 
 function Hero() {
   return (
     <div className="hero-section">
       <div className="rectangle"></div>
+
       {/* Background Video */}
       <video className="hero-video" autoPlay loop muted>
-        <source src="ratan_tata_spinner.mp4" type="video/mp4" />
+        <source src={heroVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
@@ -20,7 +25,7 @@ function Hero() {
 
         {/* Image with spotlight effect */}
         <div className="image-container">
-          <img src="./Hero.png" alt="Ratan Tata" className="image" />
+          <img src={heroImage} alt="Ratan Tata" className="image" />
           <div className="v-mega-spotlight"></div>{" "}
           <div className="v-spotlight"></div>{" "}
           {/* "V"-shaped spotlight effect */}

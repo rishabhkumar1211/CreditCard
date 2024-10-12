@@ -2,28 +2,36 @@ import React from "react";
 import { Grid, Typography, Button, Container, Box } from "@mui/material";
 import LoungeCard from "./LoungeCard";
 
+// Import sample data for lounges with corrected paths
+import indiagateImg from "../assets/images/indiagate.png"; // Corrected path for the first image
+import mumbaiImg from "../assets/images/mumbai.png"; // Corrected path for the second image
+import rajImg from "../assets/images/raj.png"; // Corrected path for the third image
+import greenImg from "../assets/images/green.png"; // Corrected path for lounge interior image
+import yellowImg from "../assets/images/yellow.png"; // Corrected path for lounge interior image
+import pinkImg from "../assets/images/pink.png"; // Corrected path for lounge interior image
+
 // Sample data for lounges
 const lounges = [
   {
-    imgSrc: "./indiagate.png", // Replace with actual image URLs
+    imgSrc: indiagateImg, // Use imported image
     loungeName: "Indra Gandhi Int’l",
     airportCode: "IGI",
     location: "New Delhi",
-    loungeImage: "./green.png", // Lounge interior image
+    loungeImage: greenImg, // Use imported lounge interior image
   },
   {
-    imgSrc: "./mumbai.png",
+    imgSrc: mumbaiImg, // Use imported image
     loungeName: "Indra Gandhi Int’l",
     airportCode: "IGI",
     location: "New Delhi",
-    loungeImage: "./yellow.png",
+    loungeImage: yellowImg, // Use imported lounge interior image
   },
   {
-    imgSrc: "./raj.png",
+    imgSrc: rajImg, // Use imported image
     loungeName: "Indra Gandhi Int’l",
     airportCode: "IGI",
     location: "New Delhi",
-    loungeImage: "pink.png",
+    loungeImage: pinkImg, // Use imported lounge interior image
   },
 ];
 
