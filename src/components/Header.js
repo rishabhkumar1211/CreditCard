@@ -39,30 +39,56 @@ const Header = () => {
           <Typography variant="body1">ABOUT US</Typography>
         </div>
         <Button
-          color="inherit"
-          style={{
+          sx={{
+            position: "relative",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontWeight: "bold",
+            textTransform: "none",
             color: "#e4c2a2",
-            borderRadius: "4px",
+            gap: "0.5rem", // Space between text and avatar
             background:
               "linear-gradient(200.74deg, rgba(214, 211, 194, 0.2) 0%, rgba(92, 92, 92, 0.14) 100%)",
-            border: "2.16px solid transparent",
-            borderImage:
-              "linear-gradient(200.74deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)",
-            borderImageSlice: 1,
+            borderRadius: "10px",
+            padding: "0.5rem 2rem", // Adjust padding to give some space around content
+            overflow: "visible", // Allow content to overflow (for avatar)
+
+            "&::before": {
+              content: '""',
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              borderRadius: "10px",
+              padding: "2.16px",
+              boxSizing: "border-box",
+              background:
+                "linear-gradient(200.74deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)",
+              WebkitMask:
+                "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+              WebkitMaskComposite: "destination-out",
+              maskComposite: "exclude",
+              pointerEvents: "none",
+            },
+
             "&:hover": {
               backgroundColor: "#505050",
             },
-            textTransform: "none",
-            display: "flex", // Align items in a row
-            alignItems: "center", // Center vertically
-            gap: "0.5rem", // Space between avatar and text
           }}
         >
           Sign In
           <Avatar
-            alt="User Avatar" // Alt text for accessibility
-            src="./profile.png" // Replace with your image path
-            style={{ width: 30, height: 30 }} // Size of the avatar
+            alt="User Avatar"
+            src="./profile.png"
+            sx={{
+              width: 40, // Increase size of avatar
+              height: 40, // Ensure avatar is larger than the button height
+              position: "absolute", // Absolute positioning for overlap
+              right: -15, // Adjust position to overlap the button
+              border: "1px solid white",
+            }}
           />
         </Button>
       </Toolbar>

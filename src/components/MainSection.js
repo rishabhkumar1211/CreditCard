@@ -19,14 +19,35 @@ const MainSection = () => {
         <Button
           variant="contained"
           className="main-button"
-          style={{
+          sx={{
+            position: "relative", // Required for the pseudo-element
+            mt: 4,
+            py: 2,
+            px: 4,
+            fontWeight: "bold",
             color: "#e4c2a2",
             background:
               "linear-gradient(200.74deg, rgba(214, 211, 194, 0.2) 0%, rgba(92, 92, 92, 0.14) 100%)",
-            border: "2.16px solid transparent", // Set border to transparent for gradient
-            borderImage:
-              "linear-gradient(200.74deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)",
-            borderImageSlice: 1, // Ensure the gradient is used for the border
+            borderRadius: "10px", // Border radius for the button
+
+            "&::before": {
+              content: '""',
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              borderRadius: "10px", // Matching border radius
+              padding: "2.16px", // Matches the border thickness
+              boxSizing: "border-box",
+              background:
+                "linear-gradient(200.74deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)",
+              WebkitMask:
+                "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)", // Ensures the gradient respects the border
+              WebkitMaskComposite: "destination-out",
+              maskComposite: "exclude",
+              pointerEvents: "none", // Prevents interaction with the pseudo-element
+            },
 
             "&:hover": {
               backgroundColor: "#505050",
