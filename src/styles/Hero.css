@@ -38,7 +38,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  z-index: 2; /* In front of the video */
+  z-index: 1; /* In front of the video */
   width: 100%;
   max-width: 1200px;
 }
