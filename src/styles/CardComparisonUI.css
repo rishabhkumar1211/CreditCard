@@ -68,14 +68,13 @@
 .title {
   font-size: 10rem;
   font-family: "PP Cirka";
-  color: #d1ad83;
-  background: linear-gradient(180deg, #524f4f 46.48%, #eead62 87.23%);
-  background-clip: text;
+  background: linear-gradient(180deg, #0e0c0c 68.48%, #eead62 87.23%);
   -webkit-background-clip: text;
   color: transparent;
   text-align: center;
   margin-bottom: 1rem;
-  z-index: 1; /* Ensures text appears above other content */
+  z-index: 1;
+  -webkit-text-stroke: 1px white;
 }
 
 @media (max-width: 768px) {
