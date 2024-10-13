@@ -1,4 +1,3 @@
-/* Hero Section */
 body {
   margin: 0;
   font-family: "PP Cirka";
@@ -18,12 +17,13 @@ body {
   width: 100vw;
   position: absolute;
   z-index: 2;
+  top: 0; /* Stick to the top */
 }
 
 /* Background video */
 .hero-video {
   position: absolute;
-  top: -10px;
+  top: 0; /* Stick video to the top */
   left: 0;
   width: 100%;
   height: 100%;
@@ -33,28 +33,28 @@ body {
 
 /* Overlay Content */
 .overlay-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative; /* Use relative instead of absolute */
+  padding-top: 20vh; /* Push down slightly on larger screens */
   color: white;
-  z-index: 1; /* In front of the video */
+  z-index: 3;
   width: 100%;
   max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* Headings and text */
 .overlay-content h1 {
   font-size: 3rem;
-  margin: 0;
+  margin: 0 auto;
   line-height: 1.2;
   text-align: center;
   color: black;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem; /* Adjust this to ensure it doesn't overlap the image */
 }
 
 .overlay-content h3 {
-  margin: 0;
+  margin: 0 auto;
   line-height: 1.2;
   text-align: center;
   color: black;
@@ -67,29 +67,30 @@ body {
 /* Container for the image with spotlight */
 .image-container {
   position: relative;
-  width: 350px; /* Adjust to match image width */
-  height: 350px; /* Adjust to match image height */
+  width: 350px;
+  height: 350px;
   margin: 0 auto;
+  z-index: 2; /* Ensure the image is in front of the spotlight */
 }
 
 /* Image inside the container */
 .image {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 94%;
   object-fit: cover;
-  z-index: 2; /* Ensure the image is in front of the spotlight */
+  z-index: 2;
   position: relative;
-  bottom: 7rem;
+  bottom: 5rem; /* Adjust this for spacing between the image and text */
 }
 
 /* Spotlight effect for reverse 'V' */
 .v-spotlight {
   position: absolute;
-  top: 50px; /* Start point of spotlight */
+  top: 50px;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  height: 206px; /* Adjust to the same height as the image */
+  height: 206px;
   z-index: 1; /* Behind the image */
 }
 
@@ -99,76 +100,63 @@ body {
   content: "";
   position: absolute;
   top: 0;
-  width: 50%; /* Cover half of the container for each beam */
+  width: 50%;
   height: 100%;
   background: linear-gradient(
     to bottom,
     rgba(158, 139, 112, 0.297) 10%,
-    /* Bronze tone at top */ rgba(212, 194, 168, 0) 100%
-      /* Fade out at bottom */
+    rgba(212, 194, 168, 0) 100%
   );
   transform-origin: top;
   filter: blur(5px); /* Soft lighting */
 }
 
-/* Left beam (skewed outward to create the 'V' shape) */
 .v-spotlight::before {
   left: 0;
-  transform: skewX(
-    20deg
-  ); /* Adjust this angle for the exact trapezoidal shape */
+  transform: skewX(20deg);
 }
 
-/* Right beam (skewed outward to create the 'V' shape) */
 .v-spotlight::after {
   right: 0;
-  transform: skewX(
-    -20deg
-  ); /* Adjust this angle for the exact trapezoidal shape */
+  transform: skewX(-20deg);
 }
 
+/* Spotlight effect for mega beams */
 .v-mega-spotlight {
   position: absolute;
-  top: 50px; /* Start point of spotlight */
+  top: 50px;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  height: 206px; /* Adjust to the same height as the image */
+  height: 206px;
   z-index: 1; /* Behind the image */
 }
 
-/* Left and right light beams */
+/* Left and right mega light beams */
 .v-mega-spotlight::before,
 .v-mega-spotlight::after {
   content: "";
   position: absolute;
   top: 40px;
-  width: 15%; /* Cover half of the container for each beam */
+  width: 15%;
   height: 100%;
   background: linear-gradient(
     to bottom,
     rgba(211, 200, 185, 0.849) 10%,
-    /* Bronze tone at top */ rgba(221, 210, 195, 0) 100%
-      /* Fade out at bottom */
+    rgba(221, 210, 195, 0) 100%
   );
   transform-origin: top;
   filter: blur(5px); /* Soft lighting */
 }
 
-/* Left beam (skewed outward to create the 'V' shape) */
 .v-mega-spotlight::before {
   left: -14px;
-  transform: skewX(
-    40deg
-  ); /* Adjust this angle for the exact trapezoidal shape */
+  transform: skewX(40deg);
 }
 
-/* Right beam (skewed outward to create the 'V' shape) */
 .v-mega-spotlight::after {
   right: -14px;
-  transform: skewX(
-    -40deg
-  ); /* Adjust this angle for the exact trapezoidal shape */
+  transform: skewX(-40deg);
 }
 
 /* Layout for hero profile and quote */
@@ -177,7 +165,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 270px;
-  top: 176px;
+  top: 50%;
   position: absolute;
 }
 
@@ -188,14 +176,14 @@ body {
 
 .hero_profile h2 {
   font-size: 2rem;
-  margin: 0;
   color: black;
+  margin: 0px;
 }
 
 .hero_profile .subheading {
   font-size: 1.2rem;
   color: #79572c;
-  margin-top: 5px;
+  margin: 0px;
 }
 
 .hero_quote {
@@ -209,15 +197,25 @@ body {
   color: black;
 }
 
-/* Optional: Styling for responsiveness */
+/* Responsive adjustments */
 @media (max-width: 768px) {
+  .overlay-content {
+    padding-top: 15vh; /* Reduce padding for smaller screens */
+  }
+
   .overlay-content h1 {
     font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .overlay-content h3 {
+    font-size: 1.2rem;
   }
 
   .hero-details {
     flex-direction: column;
     text-align: center;
+    gap: 10px;
   }
 
   .image-container {
@@ -225,17 +223,11 @@ body {
     height: 250px;
   }
 
-  .hero_profile {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .hero_quote {
-    text-align: center;
+  .image {
+    bottom: 2rem;
   }
 
   .hero_profile h2,
-  .hero_profile .subheading,
   .hero_quote blockquote {
     text-align: center;
   }
